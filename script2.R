@@ -1,21 +1,11 @@
 
-install.packages("pacman")
+# Install package
+# install.packages("tidyverse")
 
-# Load a bunch of packages
-pacman::p_load(
-  tidyverse, # the tidyverse framework
-  skimr, # skimming data 
-  here, # computational reproducibility
-  infer, # statistical inference 
-  tidymodels, # statistical modeling 
-  gapminder, # toy data
-  nycflights13, # for exercise
-  ggthemes, # additional themes
-  ggrepel, # arranging ggplots
-  patchwork, # arranging ggplots
-  broom, # tidying model outputs
-  waldo # side-by-side code comparison
-)
+# Load package
+library(tidyverse)
+
+table4a
 
 t4a_long <- table4a %>%
   pivot_longer(
@@ -24,6 +14,7 @@ t4a_long <- table4a %>%
     values_to = "tb_cases"
   )
 
-
+# t4a_long$year <- as.numeric(t4a_long$year)
+t4a_long$year <- t4a_long$year %>% as.numeric()
 
 
