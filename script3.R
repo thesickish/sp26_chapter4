@@ -82,3 +82,8 @@ starwars %>% slice_sample(
 
 set.seed(1234)
 
+starwars %>% slice_sample(
+  n = 20,
+  replace = FALSE
+)
+
